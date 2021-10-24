@@ -1,0 +1,79 @@
+​​<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: red;
+      }
+
+      /********************** DROPDOWN MENU CSS***********************/
+      .dropdown {
+        float: left;
+      }
+
+      .dropdown .dropButton {
+        font-size: 16px;
+        color: white; /* Change to website color theme accordingly */
+        padding: 14px 16px;
+        margin: 0;
+      }
+
+      .dropdown:hover .dropdownContent {
+        display: block;
+        position: absolute; /* Follows 'Services' button positioning */
+      }
+
+      .dropdownContent {
+        display: none; /* Hides the drop down menu until hovered */
+        background-color: #f9f9f9; /* Change to website color theme accordingly */
+        min-width: 160px; /* The width of the dropdown menu */
+      }
+
+      .dropdownContent a {
+        float: none; /* To list the menu content vertically, not horizontally like nav bar */
+        color: black; /* Change to website color theme accordingly */
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdownContent a:hover {
+        background-color: #ddd; /* Change to website color theme accordingly */
+      }
+      /********************** DROPDOWN MENU CSS ***********************/
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#home"> Home </a>
+      <div class="dropdown">
+        <a href="https://www.google.com/" class="dropButton"> Services </a>
+        <div class="dropdownContent" style="margin-top: 46px">
+          <a href="#"> Math </a>
+          <a href="#"> English </a>
+          <a href="#"> SAT/ACT Prep </a>
+        </div>
+      </div>
+      <a href="#contact"> Contact </a>
+      <a href="#about"> About Us </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TuftsTutorsContact</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <style>
+    h1 {
+      color: #36c0d8;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      text-align: center;
+    }
+    h5,
+    p {
+      color: rgb(68, 68, 68);
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+
+    label {
+      color: rgb(68, 68, 68);
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      background-color: rgb(255, 255, 255);
+      padding-right: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html"> Home </a>
+      <div class="dropdown">
+        <a href="services.html" class="dropButton"> Services </a>
+        <div class="dropdownContent" style="margin-top: 46px">
+          <a href="math.html"> Math </a>
+          <a href="english.html"> English </a>
+          <a href="satprep.html"> SAT/ACT Prep </a>
+        </div>
+      </div>
+      <a href="Contact.html"> Contact </a>
+      <a href="About.html"> About Us </a>
+    </div>
+
+    <!-- Second Grid -->
+    <h1>Contact Form</h1>
+
+    <div class="container">
+      <form action="#" method="post">
+        <label for="fname">First Name</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        /><br />
+
+        <label for="lname">Last Name</label><br />
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        /><br />
+
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tuftstutors@gmail.com"
+        /><br />
+
+        <label for="subject">Subject</label><br />
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="I am interested in learning more about the English tutoring program.."
+          style="height: 75px"
+        ></textarea
+        ><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="fixed-footer">
+      <div class="container">
+        Copyright &copy; 2021 TuftsTutors, LLC. All Rights Reserved
+      </div>
+    </div>
+  </body>
+</html>
