@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #36c0d8;
+}
+
+/* .description {
+  text-align: center;
+  font-size: 24px;
+} */
+
+.students {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.parents {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-right: 50px;
+  font-size: 20px;
+}
+
+ol {
+  font-size:18px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.image1 {
+  background-image:url("jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"); 
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  float: right;
+  position: relative;
+  border: #000000 3px solid;
+  object-fit: cover;
+  border: 5px solid black;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.image2 {
+  /* Change image name accordingly */
+  background-image:url("jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"); 
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  float: left;
+  position: relative;
+  border: #000000 3px solid;
+  object-fit: cover;
+  border: 5px solid black;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 200px;
+}
+
+.signup {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50px, 0)
+}
+
+.signup a {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  background-color: #36c0d8;
+}
+
+.signup a:hover {
+  background-color: #8c6464;
+}
