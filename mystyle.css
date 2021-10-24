@@ -85,6 +85,7 @@ p {
 body {
   min-height: 400px;
   margin-bottom: 90px;
+  margin: 0px 0px 0px 0;
   clear: both;
 }
 .navbar {
