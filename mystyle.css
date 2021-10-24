@@ -1,7 +1,15 @@
 h1 {
   color: #36c0d8;
-  margin-left: 20px;
-  font-size: 3vw;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+h5,
+p {
+  color: rgb(68, 68, 68);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 @media screen and (max-width: 992px) {
   h1 {
@@ -12,12 +20,6 @@ h1 {
   h1 {
     font-size: 6vw;
   }
-}
-
-p {
-  color: rgb(68, 68, 68);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
 .topnav {
