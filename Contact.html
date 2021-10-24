@@ -5,42 +5,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="mystyle.css" />
+    <style>
+      label {
+        color: rgb(68, 68, 68);
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding-right: 30px;
+      }
+      .errMsg {
+        color: #d20e11;
+        border: solid 1px #d20e11;
+        display: none;
+        padding: 1px 15px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+    </style>
+    <script language="javascript">
+      function validate() {
+        err = false;
+        document.getElementById("errName").style.display = "none";
+        document.getElementById("errEmail").style.display = "none";
+        document.getElementById("errSubject").style.display = "none";
+        with (document.data) {
+          if (firstname.value == "") {
+            document.getElementById("errName").style.display = "inline-block";
+            firstname.focus();
+            err = true;
+          }
+          if (email.value == "") {
+            document.getElementById("errEmail").style.display = "inline-block";
+            email.focus();
+            err = true;
+          }
+          if (subject.value == "") {
+            document.getElementById("errSubject").style.display =
+              "inline-block";
+            subject.focus();
+            err = true;
+          }
+        }
+        return !err;
+      }
+    </script>
   </head>
-  <style>
-    h1 {
-      color: #36c0d8;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-      text-align: center;
-    }
-    h5,
-    p {
-      color: rgb(68, 68, 68);
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-    }
 
-    label {
-      color: rgb(68, 68, 68);
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-      background-color: rgb(255, 255, 255);
-      padding-right: 30px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-  </style>
   <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -61,14 +82,16 @@
     <h1>Contact Form</h1>
 
     <div class="container">
-      <form action="#" method="post">
-        <label for="fname">First Name</label><br />
+      <form name="data" method="get" onsubmit="return validate()">
+        <label for="fname">First Name*</label><br />
         <input
           type="text"
           id="fname"
           name="firstname"
           placeholder="Your name.."
-        /><br />
+        />
+        <div id="errName" class="errMsg">Name is required</div>
+        <br />
 
         <label for="lname">Last Name</label><br />
         <input
@@ -78,22 +101,25 @@
           placeholder="Your last name.."
         /><br />
 
-        <label for="email">Email</label><br />
+        <label for="email">Email*</label><br />
         <input
           type="email"
           id="email"
           name="email"
           placeholder="tuftstutors@gmail.com"
-        /><br />
+        />
+        <div id="errEmail" class="errMsg">Email is required</div>
+        <br />
 
-        <label for="subject">Subject</label><br />
+        <label for="subject">Subject*</label><br />
         <textarea
           id="subject"
           name="subject"
           placeholder="I am interested in learning more about the English tutoring program.."
           style="height: 75px"
-        ></textarea
-        ><br />
+        ></textarea>
+        <div id="errSubject" class="errMsg">Subject is required</div>
+        <br />
 
         <input type="submit" value="Submit" />
       </form>
