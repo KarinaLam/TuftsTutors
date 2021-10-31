@@ -1,15 +1,3 @@
-h1 {
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: #36c0d8;
-}
-
-/* .description {
-  text-align: center;
-  font-size: 24px;
-} */
-
 .students {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -35,7 +23,8 @@ h2 {
 }
 
 .image1 {
-  background-image:url("jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"); 
+  /* Put background image css name in the internal style sheet */
+  /* background-image:url("antoine-dautry-05A-kdOH6Hw-unsplash.jpg");  */
   width: 500px;
   height: 500px;
   background-position: center;
@@ -50,8 +39,8 @@ h2 {
 }
 
 .image2 {
-  /* Change image name accordingly */
-  background-image:url("jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"); 
+  /* Put background image css name in the internal style sheet */
+  /* background-image:url("thisisengineering-raeng-fgdmH3iqvMw-unsplash.jpg");  */
   width: 500px;
   height: 500px;
   background-position: center;
