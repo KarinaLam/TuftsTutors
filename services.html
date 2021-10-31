@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="mystyle.css">
   <link rel="stylesheet" href="subjectstyle.css">
   <style type="text/css">
-    @media screen and (max-width: 420px) {
+/*     @media screen and (max-width: 420px) {
       .crop {
           width: 200px;
           /* 680px;  */
@@ -15,7 +15,7 @@
           /* max-height: 420px; */
           /* 420px;  */
       }
-    }
+    } */
     
     .image-column {
       column-count: 2;
@@ -26,9 +26,9 @@
     
     .crop {
         width: auto;
-        /* 680px;  */
+        max-width: 680px; 
         height: auto;
-        /* max-height: 420px; */
+        max-height: 420px;
         /* 420px;  */
         object-fit: contain;
         border: 5px solid black;
