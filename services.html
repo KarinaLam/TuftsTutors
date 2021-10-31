@@ -93,20 +93,54 @@
       }
     
     .column {
-      column-count: 3;
+      column-count: 2;
       position: absolute;
-      column-width: 33.33%;
+      column-width: 50%;
       margin-left: 10px;
     }
     
     .crop {
-        width: 450px; 
+        width: 690px; 
         height: 420px; 
         object-fit: cover;
         border: 5px solid black;
     }
 
+    .text-container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    .centered {
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .centered a {
+      text-decoration: none;
+      color: white;
+    }
+    
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $(":image").hover(function(){
+      $(this).css("transform", "scale(1.02)");
+      }, function(){
+      $(this).css("transform", "scale(1)");
+    });
+    $(".centered").hover(function(){
+      $(":image").css("transform", "scale(1.02)");
+      }, function(){
+      $(":image").css("transform", "scale(1)");
+    });
+  });
+  </script>
 </head>
   <body>
     <div class="navbar">
@@ -125,16 +159,26 @@
     <h1> Services </h1>
     <h2> Check out the services we have to offer </h2>
     <div class="column">
+      <!--  -->
+      <div class="text-container">
       <a href="math.html"> 
-          <input type="image" class="crop" src="jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"> </a> <br> <br>
-      
+          <input type="image" class="crop" src="jeshoots-com-5EKw8Z7CgE4-unsplash.jpg"> </a>
+          <div class="centered"> <a href="math.html"> Math </div>
+      </div>
+      <!--  -->
+      <div class="text-container">
       <a href="english.html">
-          <input type="image" class="crop" src="ivan-shilov-ucUB9wxkPgY-unsplash.jpg"> </a> <br> <br>
-      
+          <input type="image" class="crop" src="ivan-shilov-ucUB9wxkPgY-unsplash.jpg"> </a>
+          <div class="centered"> <a href="english.html"> English </div>
+      </div>
       <!-- REPLACE WITH SAT PAGE -->
+      <!-- <div class="text-container">
       <a href="https://canvas.tufts.edu/courses/31859">
-          <input type="image" class="crop" src="Screen Shot 2021-10-16 at 1.55.31 PM.jpg" style="margin-bottom: 70px;"> </a>
-    </div>
+          <input type="image" class="crop" src="Screen Shot 2021-10-16 at 1.55.31 PM.jpg"> </a>
+          <div class="centered"> <a href="#"> SAT/ACT </div>
+      </div> -->
+      <!--  -->
+    </div> <br>
     <div class="fixed-footer">
       <div class="container">Copyright &copy; 2021 TuftsTutors, LLC. All Rights Reserved</div> </div>
   </body>
