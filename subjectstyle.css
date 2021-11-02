@@ -5,7 +5,6 @@
   font-size: 20px;
   width: 97vw;
   height: 65vh;
-  /* display: block; */
 }
 
 .parents {
@@ -15,7 +14,6 @@
   font-size: 20px;
   width: 97vw;
   height: 65vh;
-  /* display: block; */
 }
 
 ol {
@@ -29,8 +27,6 @@ ol {
   height: 65vh;
   max-width: 500px;
   max-height:500px;
-
-  /* overflow: hidden; */
 
   background-position: center;
   float: right;
@@ -48,8 +44,6 @@ ol {
   height: 65vh;
   max-width: 500px;
   max-height:500px;
-  
-  /* overflow: hidden; */
 
   background-position: center;
   float: left;
@@ -82,4 +76,4 @@ ol {
 
 .signup a:hover {
   background-color: #8c6464;
-}
+} 
