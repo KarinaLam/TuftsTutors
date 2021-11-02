@@ -3,29 +3,174 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TuftsTutors</title>
     <link rel="stylesheet" href="mystyle.css" />
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <style type="text/css">
-      body {
-        background-image: url("students.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
+
+    body {position:relative; font-size:12px; font-family:arial; overflow: scroll; overflow-x: scroll;}
+    ul.images { position:relative; top:0px;left:0px; }
+      ul.images li { position:absolute; top:120px;left:50px; list-style: none;}
+    ul.triggers { position:absolute; top:530px; left:505px; }
+        ul.triggers li { 
+            float:left; margin:0 1px; font: bold 12px arial; cursor:pointer;
+            background-color:rgb(255, 255, 255); color:#000; padding:4px; list-style: none;
+        }ul.triggers li.active {background-color:#36c0d8; color:#8c6464; list-style: none;}
+
+    .control {position:absolute; top: 570px; color:#000000; cursor:pointer;}
+    .prev { left:545px; }
+    .next { left:600px; }
+
+    h1 { 
+      display: block;
+      text-align: center;
+      font-size: 4em;
+      margin-top: 0em;
+      margin-bottom: 0em;
+      margin-left: 0.67em;
+      margin-right: 0.67em;
+      font-weight: bold;
+      color:black;
+    }
+
+    h2 { 
+      display: block;
+      text-align: center;
+      font-size: 2em;
+      margin-top: 0em;
+      margin-bottom: 0em;
+      margin-left: 0.67em;
+      margin-right: 0.67em;
+      color:black;
+    }
+
+    p { text-align: center;}
+
+    .container2 {
+      display: block;
+      top: 620px;
+      left: 220px;
+      position: absolute;
+      overflow:auto;
+    }
+    .container3 {
+      display: block;
+      font-size: 10px;
+      top: 300px;
+      right: 50px;
+      left: 700px;
+      position: absolute;
+      overflow:auto;
+    }
     </style>
+
   </head>
+
   <body>
+
     <div class="navbar">
       <a href="index.html"> Home </a>
-      <div class="dropdown">
-        <a href="services.html" class="dropButton"> Services </a>
-        <div class="dropdownContent" style="margin-top: 46px">
-          <a href="math.html"> Math </a>
-          <a href="english.html"> English </a>
-          <a href="satprep.html"> SAT/ACT Prep </a>
+        <div class="dropdown">
+          <a href="services.html" class="dropButton"> Services </a>
+            <div class="dropdownContent" style="margin-top: 46px">
+              <a href="math.html"> Math </a>
+              <a href="english.html"> English </a>
+            </div>    
         </div>
-      </div>
       <a href="Contact.html"> Contact </a>
       <a href="About.html"> About Us </a>
+    </div>
+    <br>
+    
+      <ul class="images">
+         <li>
+            <img width="600" src="students.jpg" />
+         </li>
+         <li>
+            <img width="600" src="tutoring1.jpeg" />
+         </li>
+          <li>
+            <img width="600" src="tutoring2.jpeg" />
+         </li>
+         <li>
+            <img width="600" src="tutoring3.jpeg" />
+         </li>
+         <li>
+            <img width="600" src="tutoring4.jpeg" />
+         </li>
+      </ul>
+      
+      <ul class="triggers">
+         <li>0</li>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+      </ul>
+      <span class="control prev">Prev</span>
+      <span class="control next">Next</span>
+
+    <script>
+      var triggers = $('ul.triggers li');
+      var images = $('ul.images li');
+      var lastElem = triggers.length-1;
+      var target;
+
+      triggers.first().addClass('active');
+      images.hide().first().show();
+
+      function sliderResponse(target) {
+          images.fadeOut(300).eq(target).fadeIn(300);
+          triggers.removeClass('active').eq(target).addClass('active');
+      }
+
+      triggers.click(function() {
+          if ( !$(this).hasClass('active') ) {
+              target = $(this).index();
+              sliderResponse(target);
+              resetTiming();
+          }
+      });
+
+      $('.next').click(function() {
+          target = $('ul.triggers li.active').index();
+          target === lastElem ? target = 0 : target = target+1;
+          sliderResponse(target);
+          resetTiming();
+      });
+      $('.prev').click(function() {
+          target = $('ul.triggers li.active').index();
+          lastElem = triggers.length-1;
+          target === 0 ? target = lastElem : target = target-1;
+          sliderResponse(target);
+          resetTiming();
+      });
+
+      function sliderTiming() {
+          target = $('ul.triggers li.active').index();
+          target === lastElem ? target = 0 : target = target+1;
+          sliderResponse(target);
+      }
+
+      var timingRun = setInterval(function() { sliderTiming(); },4000);
+      function resetTiming() {
+          clearInterval(timingRun);
+          timingRun = setInterval(function() { sliderTiming(); },4000);
+      }
+
+    </script>
+    <h1>Welcome to Tufts Tutors!</h1>
+    <h2>Great tutors, affordable prices</h2>
+    <div class="container3">
+        <p style="font-size: 20px">Here at Tufts Tutors we strive to to let learners achieve academic excellence through
+        knowledgable and understanding tutors who are there for a student's every academic need.
+        From undertanding the basics of the English sentence structure to drawing 3D functions 
+        in multivariable calculus, Tufts Tutors team of high skilled tutors will be with you
+        every step of the way!</p>
+    </div>
+    <div class="container2">
+      <!-- <h2>How Tufts Tutors Works</h2> -->
+      <p style="font-size: 30px"><i>"Tell me and I forget. Teach me and I remember. Involve me and I learn."</i></p>
     </div>
     <div class="fixed-footer">
       <div class="container">
