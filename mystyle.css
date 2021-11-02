@@ -84,17 +84,10 @@ p {
   width: 290px;
 }
 
-.container {
-  border-radius: 5px;
-  background-image: url("cobb.png");
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-
 body {
   min-height: 400px;
   margin-bottom: 90px;
-  margin: 0px 0px 0px 0; 
+  margin: 0px 0px 0px 0;
   clear: both;
 }
 .navbar {
