@@ -98,9 +98,9 @@ body {
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
-  padding: 14px 16px;
+  padding: 23px 16px;
   text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ body {
   width: 95%;
   margin: 0 auto; /* Center the DIV horizontally */
   font-size: 12px;
-  color: white;
+  color: #FFFFFF;
 }
 
 .fixed-footer {
@@ -132,8 +132,8 @@ body {
 
 .dropdown .dropButton {
   font-size: 16px;
-  color: white; /* Change to website color theme accordingly */
-  padding: 14px 16px;
+  color: #FFFFFF; /* Change to website color theme accordingly */
+  padding: 23px 16px;
   margin: 0;
 }
 
@@ -146,6 +146,7 @@ body {
   display: none; /* Hides the drop down menu until hovered */
   background-color: #90eafa; /* Change to website color theme accordingly */
   min-width: 160px; /* The width of the dropdown menu */
+  margin-top: 64.5px;
 }
 
 .dropdownContent a {
