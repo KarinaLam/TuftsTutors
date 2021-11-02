@@ -3,6 +3,8 @@
     "Lucida Sans", Arial, sans-serif;
   margin-left: 50px;
   font-size: 20px;
+  width: 97vw;
+  height: 65vh;
 }
 
 .parents {
@@ -10,11 +12,12 @@
     "Lucida Sans", Arial, sans-serif;
   margin-right: 50px;
   font-size: 20px;
+  width: 97vw;
+  height: 65vh;
 }
 
 ol {
   font-size:18px;
-  white-space: nowrap;
   overflow: hidden;
   display: block;
 }
@@ -22,8 +25,17 @@ ol {
 .image1 {
   /* Put background image css name in the internal style sheet */
   /* background-image:url("antoine-dautry-05A-kdOH6Hw-unsplash.jpg");  */
-  width: 500px;
-  height: 500px;
+  /* width: 500px; */
+  /* height: 500px; */
+
+  width: 50vw;
+  height: 65vh;
+  max-width: 500px;
+  max-height:500px;
+
+  overflow: hidden;
+
+
   background-position: center;
   float: right;
   position: relative;
@@ -38,8 +50,17 @@ ol {
 .image2 {
   /* Put background image css name in the internal style sheet */
   /* background-image:url("thisisengineering-raeng-fgdmH3iqvMw-unsplash.jpg");  */
-  width: 500px;
-  height: 500px;
+  /* width: 500px; */
+  /* height: 500px; */
+
+  width: 50vw;
+  height: 65vh;
+  max-width: 500px;
+  max-height:500px;
+  
+  overflow: hidden;
+
+  
   background-position: center;
   float: left;
   position: relative;
