@@ -5,6 +5,7 @@
   font-size: 20px;
   width: 97vw;
   height: 65vh;
+  display: block;
 }
 
 .parents {
@@ -14,6 +15,8 @@
   font-size: 20px;
   width: 97vw;
   height: 65vh;
+  display: block;
+
 }
 
 ol {
@@ -25,11 +28,12 @@ ol {
 .image1 {
   /* Put background image css name in the internal style sheet */
   /* background-image:url("antoine-dautry-05A-kdOH6Hw-unsplash.jpg");  */
-  /* width: 500px; */
-  /* height: 500px; */
+  /* width: 500px;
+  height: 500px; */
 
   width: 50vw;
   height: 65vh;
+
   max-width: 500px;
   max-height:500px;
 
@@ -49,8 +53,8 @@ ol {
 .image2 {
   /* Put background image css name in the internal style sheet */
   /* background-image:url("thisisengineering-raeng-fgdmH3iqvMw-unsplash.jpg");  */
-  /* width: 500px; */
-  /* height: 500px; */
+  /* width: 500px;
+  height: 500px; */
 
   width: 50vw;
   height: 65vh;
@@ -59,7 +63,6 @@ ol {
   
   overflow: hidden;
 
-  
   background-position: center;
   float: left;
   position: relative;
@@ -76,7 +79,7 @@ ol {
     "Lucida Sans", Arial, sans-serif;
   position: relative;
   /* left: 50%; */
-  transform: translate(+50px, 0);
+  transform: translate(50px, 0);
   margin: auto;
   display: inline-block;
 }
