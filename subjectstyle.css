@@ -14,8 +14,10 @@
 
 ol {
   font-size:18px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
-
 
 .image1 {
   /* Put background image css name in the internal style sheet */
@@ -50,9 +52,13 @@ ol {
 }
 
 .signup {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50px, 0)
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: relative;
+  /* left: 50%; */
+  transform: translate(+50px, 0);
+  margin: auto;
+  display: inline-block;
 }
 
 .signup a {
