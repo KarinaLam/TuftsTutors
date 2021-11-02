@@ -7,47 +7,100 @@
     <link rel="stylesheet" href="mystyle.css" />
     <style type="text/css">
 
-    p {
-        left: 50px;
+    .img-with-text {
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    width: 75%;
     }
 
-    h2 {
-        left: 50px;
+    .img-with-text img {
+        display: block;
+        margin: 0 auto;
     }
+
+    * {
+    box-sizing: border-box;
+    }
+
+    .column {
+    left: 50px;
+    float: left;
+    width: 23%;
+    padding: 1px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
 
     </style>
   </head>
   <body>
         <div class="navbar">
         <a href="index.html"> Home </a>
-            <div class="dropdown">
-            <a href="services.html" class="dropButton"> Services </a>
-                <div class="dropdownContent" style="margin-top: 46px">
-                <a href="math.html"> Math </a>
-                <a href="english.html"> English </a>
-                </div>    
-            </div>
-        <a href="Contact.html"> Contact </a>
-        <a href="About.html"> About Us </a>
-          <a href="meettheteam.html"> Meet the Team </a>
+      <div class="dropdown">
+        <a href="services.html" class="dropButton"> Services </a>
+        <div class="dropdownContent" style="margin-top: 46px">
+          <a href="math.html"> Math </a>
+          <a href="english.html"> English </a>
         </div>
+      </div>
+      <a href="meettheteam.html"> Meet The Team </a>
+      <a href="About.html"> About Us </a>
+      <a href="Contact.html"> Contact </a>
+        </div>
+
         <h1 style="text-align: center">Meet The Team</h1>
-        <h2>Rusny Rahman</h2>
-        <p>Hello</p>
-        </br>
-        <h2>Samantha Chan</h2>
-        <p>Hello</p>
-        </br>
-        <h2>Yong Quan Tan</h2>
-        <p>Hello</p>
-        </br>
-        <h2>Karina Lam</h2>
-        <p>Hello</p>
-        </br>
+        <h2 style="text-align: center"> Welcome! </h2>
+        <div id="songlist">
+        <div class="row">
+            <div class="column">
+                <div class="img-with-text">
+                    <p>Karina Lam</p>
+                    <img width="250" src="IMG_6889.jpg"/>
+                    <p>Karina is a sophomore studying Mathematics & Computer Science at Tufts. Outside of academics, 
+                       she enjoys baking, practicing Spanish, and trying new foods!
+                    </p>    
+                </div>
+            </div>
+            <div class="column">
+                <div class="img-with-text">
+                    <p>Yong Quan Tan</p>
+                    <img width="250" src="IMG_6888.jpg"/>
+                    <p>is a junior studying Computer Science & International Relations at Tufts. He loves giving back to the community in any way he can. 
+                       During his spare time, he can be found walking in the Fells or finding a great food spot in the area.
+                    </p>    
+                </div>
+            </div>
+            <div class="column">
+                <div class="img-with-text">
+                    <p>Rusny Rahman</p>
+                    <img width="250" src="user.png"/>
+                    <p>Rusny is a sophomore studying Computer Science at Tufts. On her free time, she loves to cook new dishes, 
+                        hike, and watch movies with her sisters</p>    
+                </div>
+            </div>
+            <div class="column">
+                <div class="img-with-text">
+                    <p>Samantha Chan</p>
+                    <img width="200" src="IMG_6890.JPG"/>
+                    <p>is a sophomore studying Computer Science and Fine Arts at Tufts. She loves playing video games and 
+                        watching action movies in her spare time. She’s always excited to meet new people, so feel free to 
+                        approach her when you see her!
+                    </p>    
+                </div>
+            </div>
+          </div>
+       
         <div class="fixed-footer">
             <div class="container">
             Copyright &copy; 2021 TuftsTutors, LLC. All Rights Reserved<br>
-            Images by<a href="https://unsplash.com/">&nbsp;Unsplash
+        Images by<a href="https://unsplash.com/">&nbsp;Unsplash and Flaticon.com
             </div>
         </div>
     </body>
