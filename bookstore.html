@@ -224,14 +224,14 @@ function makeSelect(name, minRange, maxRange)
                 return noErrors;
             }
         
-            // Shows the time when food is ready
+            // Shows the time when books are ready
             function readyTime() {
                 var date = new Date();
                 var time = date.getHours() + ":" + date.getMinutes();
                 var delivery = $('#delivery:checked').val() ? true:false;
                 var minutesToAdd = delivery ? 30:15;
                 var readyAt = new Date(date.getTime() + minutesToAdd*60000);
-                timeString = ("Your meal will be ready at: " + readyAt);
+                timeString = ("Your books will be ready at: " + readyAt);
                 return timeString;
             }
             // If returning an array, reference through .value -->
