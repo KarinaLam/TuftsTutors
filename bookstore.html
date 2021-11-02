@@ -173,15 +173,16 @@ function makeSelect(name, minRange, maxRange)
                     }
                     //if no validation issues, display message (thanks + display order + pickup/delivery time + total amount)
                     else {
-                        thanks = "Thanks for your order!"
+                        thanks = "Whoever consumes literature should see to it that in the process, they do not become a book themselves. - (not) Nietzsche";
                         totalAmt = "Your total amount is: $" + $("#total").val();
                         readyStrings.push(thanks);
                         readyStrings.push(readyTime());
                         readyStrings.push(totalAmt);
                         for (i = 0; i < readyStrings.length; i++)
                             readyStrings[i] += "\r\n";
-                        var newWindow = window.open();
-                        newWindow.document.write(readyStrings.join(''));
+                        // var newWindow = window.open();
+                        // newWindow.document.write(readyStrings.join(''));
+                        alert(readyStrings.join(''));
                         // alert(readyStrings.join(''));
                         readyStrings.length = 0;
                     }
